@@ -1,44 +1,59 @@
-
 body{
-  background-image: url(img/background1.jpg);
-  background-position: center;
   text-align: center;
-  border: 5px double blue;
-  margin: auto;
+/*  background: -moz-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6-15 */
+/*background: -webkit-radial-gradient(center, ellipse cover, #b4e391 0%,#61c419 50%,#b4e391 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, orange 0%,#61c419 50%,blue 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 }
+
 h1 {
   font-size: 40px;
   font-family: 'Bungee Outline', cursive;
-  color:teal;
-}
-h2 {
-  background-color: yellow;
-  padding: 20px;
-  display: none;
-  width: 300px;
-  height: 50px;
-  text-align: center;
-}
-h1:hover + h2 {
-  display: block;
-}
+  color:darkblue;
+  border-bottom: 1px ridge blue;
+
+  }
 
 h1:hover {
   color: white;
 }
 
-
-li {
-  display: inline-block;
-  /*border: 2px solid red;
-  width: 200px;
-  height:200px;
-  border-radius: 100px;*/
-  justify-content: center;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 190px;
+/* code for my picture(bouncing)*/
+.myself {
+	animation: myself 5s ease-in-out infinite;
+	height: 150px;
+	width: 150px;
+  position: absolute;
+  top: 20px;
+  left: 560px;
 }
+.myself:after {
+	animation: myself_shadow 5s ease-in-out infinite;
+	background: blue;
+	content: '';
+	height: 5px;
+	width: 420px;
+	opacity: 0.5;
+	position: absolute;
+	left: -60px;
+	bottom: -25px;
+  transform: scale(.7);
+}
+@keyframes myself {
+	50% { transform: translateY(-20px); }
+}
+@keyframes myself_shadow {
+	50% { transform: translateY(20px) scale(1); opacity:.05; }
+}
+
+
+/* code for my picture(bouncing)*/
+.middle {
+  position: absolute;
+  top: 250px;
+  left: 240px;
+}
+
 .info:link, .info:visited {
     background-color: #f44336;
     color: white;
@@ -59,35 +74,42 @@ li {
     background-color: green;
     font-size: 40px;
     font-family: 'Fontdiner Swanky', cursive;
+
 }
 
-img {
-  width: 220px;
-  height: 270px;
-  padding-top: 10px;
+li {
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 190px;
 }
 
 nav {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 650px;
+  left: 700px;
 
-  padding-top: 50px;
-  padding-bottom: 30px;
-  text-align: center;
-  height: 60px;
 }
-.link {
-background-image: url(img/facebook.png);
-  width: 50px;
-  height:50px;
+
+.face {
+  background-image: url(img/facebook.png);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-size: contain;
-  color: transparent;
+}
+.twit {
+  background-image: url(img/twitter.png);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: contain;
 }
 
-.link1 {
-background-image: url(img/twitter.png);
-  width: 200px;
-  height:50px;
-  border-radius: 50px;
-  background-size: contain;
-  color: transparent;
+.face, .twit {
+  border: 5px ridge orange;
+
 }
