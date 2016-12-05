@@ -1,22 +1,73 @@
 body{
+  padding: 30px;
   text-align: center;
-/*  background: -moz-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6-15 */
-/*background: -webkit-radial-gradient(center, ellipse cover, #b4e391 0%,#61c419 50%,#b4e391 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, orange 0%,#61c419 50%,blue 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-image: url('img/background.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+section {
+  background-color: lightgreen;
+  border: 10px solid grey;
+  border-radius: 30px;
+  display: inline-block;
+  width: 80%;
+  height: 900px;
+  margin-top: 10px;
 
 }
+/*-------------------RIBBON-NAME------------------------*/
+.non-semantic-protector { position: relative; z-index: 1; }
 
-h1 {
-  font-size: 40px;
-  font-family: 'Bungee Outline', cursive;
-  color:darkblue;
-  border-bottom: 1px ridge blue;
+.ribbon {
+ font-size: 32px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+ margin-top: 60px;
+ margin-left: -42px;
+ width: 1048px;
+ display: inline-block;
+ position: relative;
+ background: #ba89b6;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
 
-  }
-
-h1:hover {
-  color: white;
 }
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #986794;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -3.5em;
+ border-right-width: 3em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -3.5em;
+ border-left-width: 3em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+
 
 /* code for my picture(bouncing)*/
 .myself {
@@ -24,8 +75,9 @@ h1:hover {
 	height: 150px;
 	width: 150px;
   position: absolute;
-  top: 20px;
+  top: 60px;
   left: 560px;
+  margin-top: 200px;
 }
 .myself:after {
 	animation: myself_shadow 5s ease-in-out infinite;
@@ -47,11 +99,14 @@ h1:hover {
 }
 
 
-/* code for my picture(bouncing)*/
+/*-------------------- code for my picture(bouncing)-------------------------*/
+
+
 .middle {
   position: absolute;
   top: 250px;
   left: 240px;
+  margin-top: 200px;
 }
 
 .info:link, .info:visited {
@@ -63,53 +118,76 @@ h1:hover {
     display: inline-block;
     width: 170px;
     height:190px;
-    border-radius: 110px;
-    border: 6px double pink;
-    font-family: sans-serif;
-    font-size: 20px;
+    border: 10px solid darkred;
+    border-radius: 30px;
+    font-size: 30px;
 }
 
 
-.info:hover, .info:active {
+.info a:hover, .info:active {
     background-color: green;
+    border: 10px solid darkgreen;
+    border-radius: 30px;
     font-size: 40px;
     font-family: 'Fontdiner Swanky', cursive;
-
+    transform: rotatex(360deg);
 }
 
-li {
+.info {
   display: inline-block;
   justify-content: center;
   text-align: center;
   vertical-align: middle;
   line-height: 190px;
+  transition: transform 3000ms ease;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 650px;
-  left: 700px;
+
+
+/*-----------------------------FOOTER--------------------------------*/
+.footer{
+  background-color: lightgreen;
+  border: 10px solid grey;
+  border-radius: 30px;
+  display: inline-block;
+  width: 80%;
+  height: 90px;
 
 }
+	ul.menu_b li{
+		display: inline;
+	}
+	/*ul.menu_b {
+		position: absolute;
+	}
+	ul.menu_b {
+		left: 0;
+	}
+	ul.menu_b {
+		bottom: 0;
+		width: 100%;
+	}*/
+	a:hover,
+	a:focus { /* we use :focus for keyboard navigation */
+		z-index: 50; /* bring to top when the mouse is over */
+	}
+	a .link-icons {
+		border: none;
+		-webkit-transition: all .2s; /* in Safari, every animatable property triggers an animation in .2s */
+	}
+a .link-icons{
+		-webkit-transform-origin: left center;
+		-moz-transform-origin: left center;
+	}
 
-.face {
-  background-image: url(img/facebook.png);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-size: contain;
-}
-.twit {
-  background-image: url(img/twitter.png);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-size: contain;
-}
+	ul.menu_b a .link-icons{
+		-webkit-transform-origin: bottom;
+		-moz-transform-origin: bottom;
+	}
+	a:hover .link-icons,
+	a:focus .link-icons {
+		-webkit-transform: scale(2);
+		-moz-transform: scale(2);
+	}
 
-.face, .twit {
-  border: 5px ridge orange;
-
-}
+  /*----------------------------------------------------------*/
