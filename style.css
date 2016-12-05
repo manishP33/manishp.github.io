@@ -70,25 +70,31 @@ section {
 
 
 /* code for my picture(bouncing)*/
+.photo{
+  height: 250px;
+  width: 170px;
+  border-radius: 30px;
+  box-shadow: 0 1px 15px green;
+}
 .myself {
 	animation: myself 5s ease-in-out infinite;
 	height: 150px;
 	width: 150px;
   position: absolute;
   top: 60px;
-  left: 560px;
+  margin-left: 450px;
   margin-top: 200px;
 }
 .myself:after {
 	animation: myself_shadow 5s ease-in-out infinite;
-	background: blue;
+	background: green;
 	content: '';
 	height: 5px;
-	width: 420px;
+	width: 290px;
 	opacity: 0.5;
 	position: absolute;
 	left: -60px;
-	bottom: -25px;
+	bottom: -110px;
   transform: scale(.7);
 }
 @keyframes myself {
@@ -106,7 +112,7 @@ section {
   position: absolute;
   top: 250px;
   left: 240px;
-  margin-top: 200px;
+  margin-top: 300px;
 }
 
 .info:link, .info:visited {
