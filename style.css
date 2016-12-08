@@ -1,177 +1,281 @@
 body{
-  padding: 30px;
+  padding: 0;
   text-align: center;
-  background-image: url('img/background.png');
+  background-color: #383838;
   background-repeat: repeat;
   background-attachment: fixed;
+  font-family: 'Galada', cursive;
 }
-section {
-  background-color: lightgreen;
-  border: 10px solid grey;
-  border-radius: 30px;
+/*------------------------------------------------------------------*/
+#section1 {
+  background-image: url('img/front1.jpg');
+  margin: 0;
+  max-width: 100%;
+  height: 700px;
+  padding-top: 80px;
+}
+
+/*------------------------------------------------------------------*/
+#section2 {
+  background-image: url('img/front2.jpg');
+  margin: 0;
   display: inline-block;
-  width: 80%;
-  height: 900px;
-  margin-top: 10px;
+  width: 100%;
+  height: 600px;
+  padding-top: 80px;
+}
+.aboutMe {
+  width: 60%;
+  margin: auto;
+  text-shadow: 0 1px 1px white;
+}
+#para{
+  font-weight: bolder;
+  font: 18px arial, sans-serif;
+}
+/*------------------------------------------------------------------*/
+
+#section3 {
+  background-image: url('img/front3.jpg');
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: 680px;
+  padding-top: 80px;
+}
+.working {
+  border: 2px solid white;
+  margin: auto;
+  width: 90%;
+  height: 470px;
 
 }
-/*-------------------RIBBON-NAME------------------------*/
-.non-semantic-protector { position: relative; z-index: 1; }
-
-.ribbon {
- font-size: 32px !important;
- /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
- margin-top: 60px;
- margin-left: -42px;
- width: 1048px;
- display: inline-block;
- position: relative;
- background: #ba89b6;
- color: #fff;
- text-align: center;
- padding: 1em 2em; /* Adjust to suit */
-
+.project {
+  border: 1px solid grey;
+  margin: 2px;
+  width: 30%;
+  height: 400px;
+  display: inline-block;
 }
-.ribbon:before, .ribbon:after {
- content: "";
- position: absolute;
- display: block;
- bottom: -1em;
- border: 1.5em solid #986794;
- z-index: -1;
+#projectImage {
+  width: 300px;
+  height: 280px;
+  margin: 10px;
 }
-.ribbon:before {
- left: -3.5em;
- border-right-width: 3em;
- border-left-color: transparent;
+button{
+  border-radius: 50px;
 }
-.ribbon:after {
- right: -3.5em;
- border-left-width: 3em;
- border-right-color: transparent;
-}
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
- content: "";
- position: absolute;
- display: block;
- border-style: solid;
- border-color: #804f7c transparent transparent transparent;
- bottom: -1em;
-}
-.ribbon .ribbon-content:before {
- left: 0;
- border-width: 1em 0 0 1em;
-}
-.ribbon .ribbon-content:after {
- right: 0;
- border-width: 1em 1em 0 0;
+button:hover{
+  background-color: grey;
 }
 
+/*------------------------------------------------------------------*/
 
+h1 {
+  font-size: 70px;
+  text-shadow: 2px 2px 2px white;
+  background: #00664d;
+  border-bottom-left-radius: 2em;
+  border-top-right-radius: 2em;
+  width: 85%;
+  margin: 0 auto;
+  box-shadow: 1px 4px 6px #282828;
+}
+h2 {
+  font-size: 40px;
+  text-shadow: 2px 2px 2px white;
+  background: #00664d;
+  border-bottom-left-radius: 2em;
+  border-top-right-radius: 2em;
+  width: 50%;
+  margin: 0 auto;
+}
 
-/* code for my picture(bouncing)*/
+/*--------------- my photo-------------*/
 .photo{
+  margin: 60px;
   height: 250px;
   width: 170px;
-  border-radius: 30px;
-  box-shadow: 0 1px 15px green;
-}
-.myself {
-	animation: myself 5s ease-in-out infinite;
-	height: 150px;
-	width: 150px;
-  position: absolute;
-  top: 60px;
-  margin-left: 450px;
-  margin-top: 200px;
-}
-.myself:after {
-	animation: myself_shadow 5s ease-in-out infinite;
-	background: green;
-	content: '';
-	height: 5px;
-	width: 290px;
-	opacity: 0.5;
-	position: absolute;
-	left: -60px;
-	bottom: -110px;
-  transform: scale(.7);
-}
-@keyframes myself {
-	50% { transform: translateY(-20px); }
-}
-@keyframes myself_shadow {
-	50% { transform: translateY(20px) scale(1); opacity:.05; }
+  border-radius: 50%;
+  box-shadow: 0 1px 15px #00664d;
+  float: none;
 }
 
 
-/*-------------------- code for my picture(bouncing)-------------------------*/
+/*-------------------- Nav BAr-------------------------*/
+#nav,#nav ul {
+list-style: none outside none;
+margin-left: 250px;
+padding: 0;
 
-
-.middle {
-  position: absolute;
-  top: 250px;
-  left: 240px;
-  margin-top: 300px;
+}
+#nav {
+background: url('img/menu_bg.png') no-repeat scroll 0 0 transparent;
+clear: both;
+font-size: 15px;
+height: 58px;
+padding: 0 0 0 9px;
+position: fixed;
+width: 957px;
+}
+#nav ul {
+background-color: #222;
+border:1px solid #222;
+border-radius: 0 5px 5px 5px;
+border-width: 0 1px 1px;
+box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+left: -9999px;
+overflow: hidden;
+position: absolute;
+top: -9999px;
+z-index: 2;
+-moz-transform: scaleY(0);
+-ms-transform: scaleY(0);
+-o-transform: scaleY(0);
+-webkit-transform: scaleY(0);
+transform: scaleY(0);
+/*-moz-transform-origin: 0 0;
+-ms-transform-origin: 0 0;
+-o-transform-origin: 0 0;
+-webkit-transform-origin: 0 0;
+transform-origin: 0 0;
+-moz-transition: -moz-transform 0.1s linear;
+-ms-transition: -ms-transform 0.1s linear;
+-o-transition: -o-transform 0.1s linear;
+-webkit-transition: -webkit-transform 0.1s linear;
+transition: transform 0.1s linear;*/
+}
+#nav li {
+background: url('img/menu_line.png') no-repeat scroll right 5px transparent;
+float: left;
+position: relative;
+}
+#nav li a {
+color: #FFFFFF;
+display: block;
+float: left;
+font-weight: normal;
+height: 30px;
+padding: 23px 20px 0;
+position: relative;
+text-decoration: none;
+text-shadow: 1px 1px 1px #000000;
+}
+#nav li:hover > a {
+color: #00B4FF;
+}
+#nav li:hover, #nav a:focus, #nav a:hover, #nav a:active {
+background: none repeat scroll 0 0 ;
+outline: 0 none;
+}
+#nav li:hover ul.subs {
+left: 0;
+top: 53px;
+width: 180px;
+-moz-transform: scaleY(1);
+-ms-transform: scaleY(1);
+-o-transform: scaleY(1);
+-webkit-transform: scaleY(1);
+transform: scaleY(1);
+}
+#nav ul li {
+background: none;
+width: 100%;
+}
+#nav ul li a {
+float: none;
+}
+#nav ul li:hover > a {
+background-color: #121212;
+color: #00B4FF;
+}
+#lavalamp {
+background: url('img/lavalamp.png') no-repeat scroll 0 0 transparent;
+height: 16px;
+left: 13px;
+position: absolute;
+top: 0px;
+width: 64px;
+-moz-transition: all 300ms ease;
+-ms-transition: all 300ms ease;
+-o-transition: all 300ms ease;
+-webkit-transition: all 300ms ease;
+transition: all 300ms ease;
+}
+#lavalamp:hover {
+-moz-transition-duration: 3000s;
+-ms-transition-duration: 3000s;
+-o-transition-duration: 3000s;
+-webkit-transition-duration: 3000s;
+transition-duration: 3000s;
+}
+#nav li:nth-of-type(1):hover ~ #lavalamp {
+left: 13px;
+}
+#nav li:nth-of-type(2):hover ~ #lavalamp {
+left: 90px;
+}
+#nav li:nth-of-type(3):hover ~ #lavalamp {
+left: 170px;
+}
+#nav li:nth-of-type(4):hover ~ #lavalamp {
+left: 255px;
+}
+#nav li:nth-of-type(5):hover ~ #lavalamp {
+left: 345px;
+}
+#nav li:nth-of-type(6):hover ~ #lavalamp {
+left: 440px;
+}
+#nav li:nth-of-type(7):hover ~ #lavalamp {
+left: 515px;
+}
+#nav li:nth-of-type(8):hover ~ #lavalamp {
+left: 565px;
 }
 
-.info:link, .info:visited {
-    background-color: #f44336;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    width: 170px;
-    height:190px;
-    border: 10px solid darkred;
-    border-radius: 30px;
-    font-size: 30px;
-}
 
-
-.info a:hover, .info:active {
-    background-color: green;
-    border: 10px solid darkgreen;
-    border-radius: 30px;
-    font-size: 40px;
-    font-family: 'Fontdiner Swanky', cursive;
-}
-
-.info {
+/*--------------CONTACT---------FOOTER--------------------------------*/
+#section4 {
+  background-image: url('img/front4.jpg');
+  margin: 0;
   display: inline-block;
-  justify-content: center;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 190px;
-
-}
-
-
-
-/*-----------------------------FOOTER--------------------------------*/
-.footer{
-  background-color: lightgreen;
-  border: 10px solid grey;
-  border-radius: 30px;
-  display: inline-block;
-  width: 80%;
-  height: 90px;
+  width: 100%;
+  height: 400px;
+  padding-top: 80px;
   text-decoration: none;
+  color: black;
+}
+.contacts{
+  font-size: 30px;
+  background-color: #8c6026;
+  width: 50%;
+  margin: 0 auto;
+  box-shadow: 0 0 5px 10px #DEB887;
+}
+
+.footer {
+  box-shadow: 4px 4px 4px 4px black;
+  background-color:  #331100;
+  border-top-right-radius: 2em;
+  border-top-left-radius: 2em;
+  display: inline;
+  position: fixed;
+  bottom: 0;
+  left: 440px;
+  width: 40%;
+  height: 60px;
+  padding: 5px;
 }
 	ul.menu_b li{
 		display: inline;
+
 	}
-	/*ul.menu_b {
-		position: absolute;
-	}
-	ul.menu_b {
-		left: 0;
-	}
-	ul.menu_b {
-		bottom: 0;
-		width: 100%;
-	}*/
+  a{
+    color: black;
+    text-decoration: none;
+  }
+
 	a:hover,
 	a:focus { /* we use :focus for keyboard navigation */
 		z-index: 50; /* bring to top when the mouse is over */
@@ -194,20 +298,3 @@ a .link-icons{
 		-webkit-transform: scale(2);
 		-moz-transform: scale(2);
 	}
-
-  /*----------------------------------------------------------*/
-
-  /*---------------------WORK PAGE-------------------------------------*/
-  .work-group {
-    background-color: lightblue;
-    border: 10px solid blue;
-    border-radius: 30px;
-    margin: 30px;
-    padding: 40px;
-  }
-  .project {
-    box-shadow: 1px 4px 8px blue;
-    margin: 0 auto;
-    width: 40%;
-    height: 400px;
-  }
