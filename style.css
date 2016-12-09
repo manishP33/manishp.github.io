@@ -30,8 +30,8 @@ body{
   text-shadow: 0 1px 1px white;
 }
 #para{
-  font-weight: bolder;
-  font: 18px arial, sans-serif;
+
+  font: 17px arial black, sans-serif;
 }
 /*------------------------------------------------------------------*/
 
@@ -255,6 +255,7 @@ left: 565px;
   box-shadow: 0 0 5px 10px #DEB887;
 }
 
+
 .footer {
   box-shadow: 4px 4px 4px 4px black;
   background-color:  #331100;
@@ -277,9 +278,9 @@ left: 565px;
     text-decoration: none;
   }
 
-	a:hover,
-	a:focus { /* we use :focus for keyboard navigation */
+	a:hover, a:focus { /* we use :focus for keyboard navigation */
 		z-index: 50; /* bring to top when the mouse is over */
+    color: white;
 	}
 	a .link-icons {
 		border: none;
