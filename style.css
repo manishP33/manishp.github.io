@@ -1,25 +1,47 @@
+html{
+    width:100%;
+    height:100%;
+}
 body{
+    width:100%;
+    height:100%;
   padding: 0;
   text-align: center;
   background-color: #383838;
   background-repeat: repeat;
   background-attachment: fixed;
   font-family: 'Galada', cursive;
+  width: 100%;
 }
+
 /*------------------------------------------------------------------*/
 #section1 {
   background-image: url('img/front1.jpg');
+  background-position: center;
   margin: 0;
-  max-width: 100%;
+  width: 100%;
   height: 700px;
   padding-top: 80px;
+  display: block;
 }
+/*--------------- my photo-------------*/
+.photo{
+  margin: 60px;
+  height: 250px;
+  width: 170px;
+  border-radius: 50%;
+  box-shadow: 0 1px 15px black;
+  float: none;
+  
+}
+
 
 /*------------------------------------------------------------------*/
 #section2 {
   background-image: url('img/front2.jpg');
+  background-position: center;
   margin: 0;
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 600px;
   padding-top: 80px;
@@ -27,11 +49,11 @@ body{
 .aboutMe {
   width: 60%;
   margin: auto;
-  text-shadow: 0 1px 1px white;
+
 }
 #para{
-
-  font: 17px arial black, sans-serif;
+  color: 	#D8D8D8;
+  font: 20px arial, sans-serif;
 }
 /*------------------------------------------------------------------*/
 
@@ -56,7 +78,7 @@ body{
   width: 30%;
   height: 400px;
   display: inline-block;
-  color: white;
+  color: #D8D8D8;
 }
 #projectImage {
   width: 300px;
@@ -81,10 +103,11 @@ h1 {
   width: 85%;
   margin: 0 auto;
   box-shadow: 1px 4px 6px #282828;
+
 }
 h2 {
   font-size: 40px;
-  text-shadow: 2px 2px 2px white;
+  text-shadow: 1px 2px 2px white;
   background: #00664d;
   border-bottom-left-radius: 2em;
   border-top-right-radius: 2em;
@@ -92,15 +115,7 @@ h2 {
   margin: 0 auto;
 }
 
-/*--------------- my photo-------------*/
-.photo{
-  margin: 60px;
-  height: 250px;
-  width: 170px;
-  border-radius: 50%;
-  box-shadow: 0 1px 15px #00664d;
-  float: none;
-}
+
 
 
 /*-------------------- Nav BAr-------------------------*/
