@@ -138,12 +138,10 @@ $headers = 'From: '.$email_from."\r\n".
 
 
 
-Thank you for contacting me. I will be in touch with you very soon.
+<!-- Thank you for contacting me. I will be in touch with you very soon.
 
 
 
-<?php
 
-}
 
-?>
+} -->
